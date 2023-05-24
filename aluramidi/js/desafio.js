@@ -17,4 +17,8 @@ for(let i = 0; i < listaDeTeclas.length; i++) {
     teclaApagar.onclick = function() {
         tela.value = '';
     }
+
+    tecla.onkeydown = function() {
+        tela.value += tecla.value;
+    }
 }
