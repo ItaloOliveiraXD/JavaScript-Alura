@@ -1,6 +1,6 @@
 let livros = [];
 const endpointDaAPI = 'https://guilhermeonrails.github.io/casadocodigo/livros.json';
-const botaoFrontEnd = document.getElementById('btnFiltrarLivrosFront')
+getBuscarLivrosDaAPI();
 
 async function getBuscarLivrosDaAPI() {
     const response = await fetch(endpointDaAPI);
@@ -8,6 +8,3 @@ async function getBuscarLivrosDaAPI() {
     let livrosComDesconto = aplicarDesconto(livros);
     exibirOsLivrosNaTela(livrosComDesconto);
 }
-
-getBuscarLivrosDaAPI();
-
