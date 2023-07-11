@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+const somar = document.querySelector('#somar');
+const subtrair = document.querySelector('#subtrair');
+
+const controle = document.querySelectorAll('.controle-ajuste');
+controle.forEach((elemento) => {
+    elemento.addEventListener('click', (evento) => {
+        manipulaDados(evento.target.textContent, evento.target.parentNode);
+
+    });
+});
+
+function manipulaDados(comando, controler) {
+    const peca = controler.querySelector('.controle-contador');
+
+    if (comando === '+') {
+        peca.value = parseInt(peca.value) + 1;
+    } else {
+        peca.value = parseInt(peca.value) - 1;
+    }
+}
+=======
 const controle = document.querySelectorAll('[data-controle]');
 const estatisticas = document.querySelectorAll('[data-estatistica]');
 
@@ -56,3 +78,4 @@ function atualizaEstatisticas(peca) {
         elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica]
     })
 }
+>>>>>>> ca4815687c90520cc02bc00e4339f1ab37160728
